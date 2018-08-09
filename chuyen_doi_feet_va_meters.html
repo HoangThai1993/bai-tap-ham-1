@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi feet va meeters</title>
+    <script>
+        function changeFTM(number) {
+            number = parseFloat(number);
+            document.getElementById("outputForM").innerHTML = 3.279 * number;
+        }
+        // ham tinh tu feet sang meters
+        function changeMTF(number) {
+            number = parseFloat(number);
+            document.getElementById("outputForM").innerHTML = 0.305* number;
+        }
+        // ham tinh tu meters sang feet
+    </script>
+</head>
+<body>
+    <p>
+        <label>Change Feet & Meters</label>
+        <input id="inputFeet&Meters" type="number" placeholder="Feet to Meters" oninput="changeFTM(this.value)" onchange="changeFTM(this.value)">
+        <!-- dung ham chuyen tu feet sang meters -->
+
+        <input id="inputFeet&Meters1" type="number" placeholder="Meters to Feet" oninput="changeMTF(this.value)" onchange="changeMTF(this.value)">
+        <!-- dung ham chuyen tu meters sang feet -->
+    </p>
+    <p>Result: <span id="outputForM"></span></p><!--Tra ket qua tu ham-->
+</body>
+</html>
